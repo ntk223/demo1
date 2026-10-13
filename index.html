@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theo dõi công việc — Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>📋 Theo dõi công việc</h1>
+      <div class="stats" id="stats"></div>
+    </header>
+
+    <!-- Form thêm task -->
+    <form id="add-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Thêm việc cần theo dõi..."
+        maxlength="200"
+        autocomplete="off"
+      />
+      <button type="submit">Thêm</button>
+    </form>
+    <p class="error" id="error" hidden></p>
+
+    <!-- Bộ lọc -->
+    <nav class="filters">
+      <button data-filter="all" class="active">Tất cả</button>
+      <button data-filter="active">Đang làm</button>
+      <button data-filter="done">Hoàn thành</button>
+    </nav>
+
+    <!-- Danh sách task -->
+    <ul id="task-list"></ul>
+
+    <footer id="footer"></footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
